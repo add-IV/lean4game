@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux';
 import Split from 'react-split'
 
 import GameMenu from './GameMenu';
-import {PrivacyPolicy} from './PrivacyPolicy';
 
 cytoscape.use( klay );
 
@@ -121,7 +120,6 @@ function Welcome() {
       </div>
     </Split>
   }
-    <PrivacyPolicy />
   </div>
 }
 
