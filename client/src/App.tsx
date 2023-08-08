@@ -16,7 +16,7 @@ function App() {
   const params = useParams();
   return (
     <div className="app">
-      <GameIdContext.Provider value={""}>
+      <GameIdContext.Provider value={"g/" + params.owner + "/" + params.repo}>
         <Outlet />
       </GameIdContext.Provider>
     </div>
