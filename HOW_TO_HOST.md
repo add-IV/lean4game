@@ -20,7 +20,7 @@ needed software:
 
 1. clone the server repo (this one)
 2. cd into the repo
-3. you might have to run `npm install` and `npm run build` first, I've included the bundles.js file in the repo so it might not be necessary
+3. you might have to run `npm install` and `npm run build` first, but since the project uses webpack and i have included the bundle.js files it might not be necessary
 4. start pm2
 
 ```bash
