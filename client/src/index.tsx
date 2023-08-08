@@ -20,16 +20,16 @@ monacoSetup()
 
 const router = createHashRouter([
   {
-    path: "/g/:owner/:repo",
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/g/:owner/:repo",
+        path: "/",
         element: <Welcome />,
       },
       {
-        path: "/g/:owner/:repo/world/:worldId/level/:levelId",
+        path: "/world/:worldId/level/:levelId",
         element: <Level />,
       },
     ],
