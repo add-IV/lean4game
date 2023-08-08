@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./client/dist/",
+    "module": "esnext",
+    "target": "es5",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+  },
+  "exclude": ["server"]
+}

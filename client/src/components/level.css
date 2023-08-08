@@ -1,0 +1,173 @@
+.level {
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.gutter {
+  background-color: #eee;
+
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-vertical {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+}
+
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+
+.inventory-panel, .exercise-panel, .doc-panel {
+  height: 100%;
+  overflow: auto;
+}
+
+.introduction-panel, .infoview, .exercise {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0;
+}
+
+.conclusion {
+  padding: 1em;
+}
+
+.infoview {
+  padding-top: 0em;
+}
+
+.exercise {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.codeview {
+  flex: 1 1 auto;
+  min-height: 192px;
+
+}
+
+.exercise h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.input-mode-switch {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.doc-panel {
+  background: #fafafa;
+}
+
+.doc-panel li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12); /* This should be teh same colour as `divider` in Inventory.tsx */
+}
+
+.doc-panel li:first-of-type {
+  border-top: 1px solid rgb(0, 0, 0, 0.12); /* This should be teh same colour as `divider` in Inventory.tsx */
+}
+
+/* fix as Mui seems to set this to `nowrap`. */
+.MuiAccordionDetails-root {
+  white-space: normal;
+}
+
+/* TODO: Adjust Mathjax styling. 1em vertical is excessive. */
+mjx-container[jax="CHTML"][display="true"] {
+  margin: 0.2em 0 !important;
+}
+
+
+/* Styling tables for Markdown */
+.introduction-panel table, .introduction-panel th, .introduction-panel td {
+  /* border: 1px solid rgb(0, 0, 0, 0.12); */
+  border-collapse: collapse;
+}
+
+.introduction-panel th, .introduction-panel td {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+span.katex-display {
+  margin: 0;
+}
+
+p, table {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* Prevent white spaces break inside a table. */
+td code  {
+  white-space:nowrap;
+}
+
+/* Styling in the editor while typing abbreviations such as "\alpha" */
+.abbreviation {
+  text-decoration: underline;
+}
+
+/* Styling in the left margin of the editor when processing */
+.processing {
+  background: linear-gradient(
+    to right,
+    rgba(255, 165, 0, 1) 0%,
+    rgba(255, 165, 0, 1) 30%,
+    transparent 30%,
+    transparent  100%
+  );
+}
+
+/* Styling in the left margin of the editor on error */
+.glyph-margin-error {
+  background: rgba(255, 0, 0, 1);
+}
+
+/***************************************/
+/* TODO: For development purposes only */
+/***************************************/
+/* .doc-panel {
+  border: 1px solid red;
+}
+
+.main-panel {
+  border: 1px solid rgb(41, 112, 0);
+}
+
+.info-panel {
+  border: 1px solid rgb(230, 122, 0);
+}
+
+.introduction-panel {
+  border: 1px solid rgb(192, 18, 178);
+}
+
+.exercise {
+  border: 1px solid rgb(102, 243, 67);
+}
+
+.codeview {
+  border: 1px solid rgb(98, 148, 255);
+}
+
+.main-grid {
+  border: 1px solid rgb(255, 0, 0);
+  margin: 1px;
+} */

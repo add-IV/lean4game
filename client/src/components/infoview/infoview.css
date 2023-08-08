@@ -1,0 +1,130 @@
+
+.message {
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.message.info {
+  /* color: #059; */
+  background-color: #DDF6FF;
+}
+.message.warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.message.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.hyp-group {
+  margin-bottom: 0.3em;
+}
+
+.hyp-group-title, .goal-title {
+  font-family: var(--ff-primary);
+  font-size: 1.2rem;
+}
+
+.goals-section-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.level-completed {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.command-line {
+  background: var(--clr-primary);
+  padding: 0.5em;
+  font-family: var(--ff-primary);
+  border-radius: 0.2em;
+  margin: 0.2em 0;
+}
+
+.command-line form {
+  display: flex;
+}
+
+.command-line button {
+  display: block;
+  white-space: nowrap;
+  flex: 0;
+}
+
+.command-line .command-line-input-wrapper{
+  min-width: 0;
+  flex: 1;
+  padding: 0.4em .6em 0;
+  font-size: 1rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.command-line .command-line-input{
+  flex: 1;
+}
+
+/* Turn off some monaco decorations: */
+.command-line-input .monaco-editor .view-overlays .current-line {
+  border: 0;
+}
+.command-line-input .monaco-editor .scroll-decoration {
+  box-shadow: none;
+}
+
+.other-goals .goals-section-title, .other-goals summary, .other-goals summary .font-code {
+  color: #5191d1;
+}
+
+.goals-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.goals-section div {
+  flex-grow: 1;
+}
+
+#current-proof, #main-assumptions {
+  margin-right: 0.8em;
+}
+
+#current-proof, #other-goals {
+  margin-left: 0.8em;
+}
+
+.proof-display {
+  max-height: 6em;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y proximity;
+  color: #ccc;
+
+}
+
+.proof-display div:nth-last-child(4) {
+  color: #999;
+}
+
+.proof-display div:nth-last-child(3) {
+  color: #666;
+}
+
+.proof-display div:nth-last-child(2) {
+  color: #333;
+}
+
+.proof-display div:nth-last-child(1) {
+  color: #000;
+  scroll-snap-align: end;
+}
+
+.proof-display-wrapper {
+  background-color: #f0f0f0;
+  border-radius: 1em;
+  padding: 0.6em;
+}
