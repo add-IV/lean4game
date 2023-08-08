@@ -1,6 +1,6 @@
 # Lean 4 Game
 
-Fork of Lean4Game, stuck at an earlier version and optimized for a single game without a landing page.
+Fork of [Lean4Game](https://github.com/leanprover-community/lean4game), stuck at an earlier version and optimized for a single game without a landing page.
 
 ## Security
 
