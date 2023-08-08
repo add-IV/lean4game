@@ -16,16 +16,10 @@ import { importTrigger, importStatus } from './import.mjs'
  * use a project directory instead of a docker container.
 */
 const games = {
-    "g/add/addgame": {
+    "g/add/addgame": { // the tag of our docker image
         // module: "Game",  // The lean module's name. Defaults to "Game"
         // name: "Adam",    // For the `Game "Adam"` tag in the games. Defaults to "MyGame"
-        dir: "../../../../Add",
-        queueLength: 5
-    },
-    "g/hhu-adam/nng4": {
-        // module: "Game",
-        // name: "NNG",
-        dir: "../../../../NNG4",
+        dir: "../../../../Add", // only for development, ignore
         queueLength: 5
     }
 }
@@ -96,14 +90,14 @@ if (!isDevelopment) { // Don't use queue in development
     }
 }
 
-const urlRegEx = /^\/websocket\/g\/([\w.-]+)\/([\w.-]+)$/
+const urlRegEx = /^\/websocket\/g\/([\w.-]+)\/([\w.-]+)$/ // matches /websocket/g/first/second ; first and second are grousp; in our case add and addgame
 
 wss.addListener("connection", function(ws, req) {
     const reRes = urlRegEx.exec(req.url)
     if (!reRes) { console.error(`Connection refused because of invalid URL: ${req.url}`); return; }
     const owner = reRes[1]
     const repo = reRes[2]
-    const tag = `g/${owner.toLowerCase()}/${repo.toLowerCase()}`
+    const tag = `g/${owner.toLowerCase()}/${repo.toLowerCase()}` // g/add/addgame
 
     let ps;
     if (!queue[tag] || queue[tag].length == 0) {
